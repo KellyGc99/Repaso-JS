@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES</title>
+</head>
+<body>
+    <h1>FUNCIONES BÁSICO 1</h1>
+    <p>¿ Qué es una función ?
+        Es un bloque de código independiente, se define una sola vez y puede ejecutarse en cualquier momento, lo puedo reutilizar cuantas veces sea necesaria. Puede o no recibir parámetro y devolver o no valores. 
+        Son un tipo de dato especial, son poderosas en JS, les puedo asiganar valores, parámetros, argumentos, otras funciones.
+        Arraow Function tambien son un tipo de funciones , pero aca veremos los conceptos básicos, las funciones básicas. 
+        Hay dos tipos, funciones declaradas y funciones expresadas (en estas se encuentran las arrow functions o anónimas, pero en algo más avanzado). 
+        También pueden devolver valores con la palabra reservada RETURN. 
+        Los parámetros pueden tener valores por defecto
+    </p>
+    <script>
+// Funciones
+console.log("******* Básicas ********")
+function funcionesBasicas(){
+    console.log("Hola");
+    console.log("Hola2");
+    console.log("Hola3");
+}
+//asi iniciamos una función , siempre debe tener los parentesis, de otro modo se confunde con una variable
+funcionesBasicas();
+
+// Funciones con RETURN
+console.log("******* con return ********") 
+
+function conRetorno (){
+    console.log("Uno");
+    //Aqui pondremos otro RETURN , cuando esto pasa el programa solo devuleve lo que esta antes del primer RETURN el resto se ignora 
+    return("Soy el segundo RETURN")
+    console.log("Dos");
+    return ("Acabo de retornar algo diferente");
+}
+//Aca la asignamos con una variable debido a que tenemos muchos console.log y que el RETURN se está ejecutando pero no lo estamos viendo. Los console.log automaticamente se muestran en consola pero el RETURN no, por eso lo asignaomos a una variable. 
+let elValorRetornado = conRetorno();
+//Llamamos la variable en un console.log para poder ver el RETURN en consola
+console.log(elValorRetornado);
+
+//Con parámetros
+console.log("******* con parámetros ********")
+
+function saludar (nombre,edad){
+// para evitar el UNDEFINED en los parámetros si no se les asignara, podemos igualar a un valor determinado los parámetros del parentesis como en la linea 49.
+// function saludar (nombre= "Desconocido", edad = 0){ 
+console.log(`Hola , mi nombre es ${nombre} y tengo ${edad} años`);
+}
+//saludar("kelly",22);
+//este console.log vacio arrojaria un UNDEFINED
+saludar ();
+
+console.log("******* Declaradas Vs Expresadas ********") 
+// Funciones declaradas
+// Pueden funcionar justo antes de ser escritas, no se recomiendan por buenas prácticas
+declarada ();
+
+function declarada (){
+    console.log("Soy una función declarada");
+}
+
+//Expresadas tambien conocidas como arrow functions pero mas pro :V
+// Funcionan despues de declaradas, antes no 
+//Son las mas adecuadas, mejores prácticas, indica orden en código
+// aca no se l epone nombre a la funcion , por eso también se conoce como anónima
+
+const funcionExpresada = function(){
+    console.log("Soy una expresada");
+}
+
+funcionExpresada();
+
+    </script>
+</body>
+</html>

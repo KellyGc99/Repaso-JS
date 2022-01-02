@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUMEROS</title>
+  </head>
+  <body>
+    <h1>Números</h1>
+    <h2>
+      Para JavaScript solo existen números, no importa si es un entero, decimal
+      o demás, siempre se lee como un número . Sin embargo, existen multiples
+      métodos para acceder a ellos.
+    </h2>
+    <p>
+      Podemos buscar información en las diferentes páginas como w3school para
+      los métodos
+    </p>
+    <p>
+      Accedemos al método toFixed directamente con el (.) debido a qué accedemos
+      a el directamente, diferente de parseInt o parseFloat ya que estos primero
+      acceden al contructor NUMBER por esta razon no usamos el (.).
+    </p>
+    <h2>parseInt:</h2>
+    <p></p>
+    <script>
+      let numero1 = 2;
+      let numero2 = 1;
+      let numero3 = 7.19;
+      let numero4 = "56";
+      console.log(numero1, numero2);
+      console.log(
+        "El método toFixed nos permite obtener los números decimales que queramos"
+      );
+      console.log(numero3.toFixed(3));
+      console.log(numero3.toFixed(1));
+      console.log(
+        "parseInt es un método que nos envía solo la paarte entera del valor que queramos"
+      );
+      console.log(parseInt(numero3));
+      console.log(
+        "parseFloat es un método que nos envía la parte decimal yy también nos permite transformar el dato que recibimos"
+      );
+      console.log(parseFloat(numero3));
+      console.log(typeof numero1, typeof numero4);
+      console.log(numero1 + numero2);
+      //acá accedemos al objeto number pero igual funciona lo tenga o no , puesto que estamos accediendo de la manera correcta a los valores
+      console.log(numero3 + parseInt(numero4));
+      console.log(numero3 + Number.parseInt(numero4));
+      console.log(numero3 + parseFloat(numero4));
+      console.log(numero3 + Number.parseFloat(numero4));
+    </script>
+  </body>
+</html>

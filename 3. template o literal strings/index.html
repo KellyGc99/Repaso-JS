@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONCATENACIÓN E INTERPOLACIÓN</title>
+</head>
+<body>
+  <h1>template strings o literal strings</h1>
+  <p>Concatenación : Unir una cadena de texto con una variable o con otra cadena de texto</p>
+  <p>Interpolación: agragar el valor de una variable a una cadena de texto por medio de las template strings o literal strings</p>
+  <script>
+  console.log("Ejemplo de concatenación")
+  let nombre = "Kelly";
+  let apellido = "Gutierrez";
+  nombre= "pez";
+  apellido="dorado";
+  nombre= "Diego";
+  apellido="Bigoton";
+  let saludo = "Hola , mi nombre es "+ " " + nombre + " " + apellido + "."
+  console.log (saludo);
+  console.log("******************************");
+  console.log("Ejemplo de interpolación")
+  let saludo2 = `Hola mi nombre es ${nombre} y mi apellido es ${apellido}. `
+  console.log(saludo2);
+  console.log("También sirven para construir código HTML dinámico")
+  let ul =`
+  <ul>
+    <li>luz</li>
+    <li>paz</li>
+    <li>Hope</li>
+  </ul>`;
+  console.log(ul);
+  console.log("No es posible crear html dinámico con comillas dobles o simples, tendria que ir uno al lado del otro")
+  let ul2 = "<ul><li>luz</li><li>paz</li><li>hope</li></ul>"
+  console.log(ul2);
+  console.log ("o construir cada linea por variables")
+  let ul3= "<ul>";
+    ul3+="<li>Luz</li>";
+    ul3+="<li>Paz</li>";
+    ul3+="<li>Hope</li>";
+    ul3+="</ul>";
+  console.log(ul3);
+  console.log("************************************************");
+  let color = "morado";
+  let objeto= "pelota";
+  let ejemplo = `Tengo una ${objeto} y es de color ${color}`;
+  console.log(ejemplo);
+    </script>
+</body>
+</html>

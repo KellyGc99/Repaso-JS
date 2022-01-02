@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1>STRINGS O CADENAS DE TEXTO</h1>
+    <h2>Todo en JS son objetos</h2>
+    <p>
+      Es un tipo de dato consturctor para cualquier secuencia de caracteres. Los
+      string o cadenas de texto son tipos de datos PRIMITIVOS.
+    </p>
+    <p>
+      Para buscar información con respecto a cualquier tema en JS puedes acceder
+      a Developer Mozzila Network o W3school.
+    </p>
+    <p>
+      Propiedades son caracteristicas que describen algo , los métodos son las
+      acciones que hace. Los métodos siempre tienen paréntesis
+    </p>
+    <script>
+      console.log(
+        "Una cadena de texto es un texto que está entre comillas, ya sea simples o dobles,usualmente eso no produce ningún problema"
+      );
+      let nombre = "Kelly";
+      let apellido = "Gutierrez";
+      let texto =
+        "        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam eos error ea architecto, sunt beatae cum dolorem ad iusto ipsa, doloremque eveniet molestiae fugiat id recusandae a iure numquam.        ";
+      console.log("Length es una propiedad para la longitud de la cadena");
+      console.log(nombre, apellido);
+      console.log(nombre.length, apellido.length);
+      console.log("Métodos como toLowerCase es para minúsculas y el otro para mayúsculas, includes para buscar coincidencias, tirmp para eliminar espacios en blanco, split para separar cada que encuentre un espacio en blanco y lo convierte en un arreglo");
+      console.log(apellido.toLowerCase(),
+       nombre.toUpperCase(), 
+       texto.includes("amet"),
+       texto,
+       texto.trim(),
+       texto.split(),
+       texto.split (" "),
+       texto.split(","));
+    </script>
+  </body>
+</html>

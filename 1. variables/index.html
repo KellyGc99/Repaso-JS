@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>VARIABLES:</h1>
+    <p>
+      Son lugares en la memoria de la computadora para almacenar datos, antes se<br>
+      utilizaba la palabra VAR , sin embargo ahora utilizamos CONST o LET. VAR<br>
+      no permitia la ejecució del código en bloque , le quitaba alcance pues<br>
+      esto las definia como variables globales. VAR de ámbito global, ya no se<br>
+      usa porque no es una buena práctica y además implica problemas en la<br>
+      ejecución del código ya que aparecen en el objeto WINDOW , LET ámbito de<br>
+      bloque, solp existe en el bloque donde ha sido definido. Un bloque en JS<br>
+      es lo que está definido entre llaves {}
+    </p>
+    <br>
+    <article>
+      Var quedará en el objeto global window, mientras que let y const no Var<br>
+      variables globales, Let variables de bloque.
+    </article>
+    <br>
+    <article>
+      No usar var, usar let o const dependiendo del caso, const es para declarar<br>
+      variables que no cambiarán su valor, diferente de let que es para<br>
+      variables modificables.
+    </article>
+    <br />
+    <p>
+      USO Y CARACTERISTICAS DE CONST
+      <br />
+      Cuando tengamos variables que no cambiaran su valor durante el uso de mi<br>
+      aplicación. Además de eso si utilizamos CONST no podemos dejarla como una<br>
+      variable vacia, cosa que si se puede con LET. Const no permite ser<br>
+      modificada cuando se usan valores primitivos, es diferente al usar valores<br>
+      compuestos como arrays, objetos , etc.
+      <br>
+      No puedes volver variable un valor constante.
+    </p>
+    <br>
+    <h2>OLVIDATE DE VAR</h2>
+    <br>
+    <script>
+      var hola = "Hola mundo";
+      console.log(hola);
+      let hello = "Hello world";
+      console.log(hello);
+      /*Ejemplo de por qué no usar var y su variación a nivel global*/
+      console.log("**************CON VAR**************");
+      var musica = "Rock";
+      console.log("musica antes del bloque = a ", musica);
+      {
+        var musica = "Pop";
+        console.log("musica dentro del bloque = a ", musica);
+      }
+      console.log("musica después del bloque = a ", musica);
+      /*La variable declarada por VAR no se modifica en la ultima llamada, 
+      eso quiero decir que las variables se cambian de manera global aunque
+       estén guardadas en un bloque*/
+
+      console.log("**************CON LET**************");
+      /*Ejemplo de por qué usar LET*/
+      let musica2 = "Rock";
+      console.log("musica antes del bloque = a ", musica2);
+      {
+        let musica2 = "Pop";
+        console.log("musica dentro del bloque = a ", musica2);
+      }
+      console.log("musica después del bloque = a ", musica2);
+      /*En el objeto window no queda la variable musica como global, por el contrario respeta los bloques*/
+
+      console.log("***********variable vacia con let y const**********");
+      let a;
+      /*Aquí no me va a permitir poner como constante una variable vacia*/
+      /*const a;*/
+      a = "Azul";
+      console.log(a);
+      console.log("*******Intentar cambiar un valor en const*******");
+      /*En consola va a mostrar un error puesto que valor de nueve ya estaba definida
+       como una variable no modificable, no puedes volver variable una constante*/
+      /*const nueve= 9;*/
+      let nueve = 9;
+      nueve = 8;
+      console.log(nueve);
+    </script>
+  </body>
+</html>

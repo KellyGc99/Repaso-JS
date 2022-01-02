@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAYS</h1>
+    <p>También llamados arreglos, se identifican con llaves cuadradas [] , es recomendable utilizar CONST tanto en arrays como en objetos y demás datos , puesto que aunque su contenido se modifique, el dato seguirá siendo un arreglo.
+    Un array es una colección de elementos de diferente tipo, dentro de un array puede haber un objeto, un boolena, otro array, etc
+    dentro del array, los elemtnos tienen posiciones, empiezan desde el 0 pero este no es el mismo numero de datos que exitesn dentro de el
+    es solo la posición en la que se encuentran los datos. La propiedad LENGHT nos devuelve la longitud del array.
+    Podemos acceder a un dato del array por medio de la posición, esto solo sirve si la conocemos. Podemos crear 
+    un nuevo array a partir de la opción Array.of(esto hace parte de ECMAScript 6) , con Array.fill podemos asignar a x cantidad de datos un mismo valor.
+    Para los array también existen métodos que nos permite interactuar con los datos del array como PUSH (agrega un elemnto) y POP (elimina el ultimo elemento del array)
+    FOREACH (permite una función que se ejecuta por cada elemnto del array) existen más métodos que son para escribir programación funcional, más avanzados. Por ahora estos 3 métodos son básicos y permiten hacer modificaciones. </p>
+<script>
+    console.log("********** Array vacio ***********");
+    const a = [];
+    console.log(a);
+    console.log("********* Array con datos **********");
+    const b = [1,true,"hola",["a","b","c"]];
+    console.log(b);
+    console.log("***** propiedad LENGTH para saber cuántos datos hay *****")
+    console.log(b.length);
+    console.log("***** traer un dato por la posición *****")
+    console.log(b[2]);
+    console.log("***** traer un dato del array que está dentro de otro dato *****")
+    console.log(b[3][2])
+    console.log("***** Crear un array a partir de Array.of *****")
+    const c = Array.of("X","Y","A", 1,2,3);
+    console.log(c);
+    console.log("***** Crear un array con valores predeterminados y x cantidad de datos con Array.fill *****")
+    const d = Array(20).fill("K");
+    console.log(d);
+    console.log("******  métodos de los array .PUSH")
+    const colores= ["rojo","azul","amarillo","dorado"];
+    console.log(colores);
+    colores.push("negro");
+    console.log(colores);
+    console.log("******  métodos de los array .POP")
+    colores.pop();
+    console.log(colores);
+    console.log("******  métodos de los array forEach")
+    colores.forEach(function (e){
+      console.log(`<li>${e}</li>`)
+    });
+    console.log("******  métodos de los array forEach con dos parámetros");
+    colores.forEach(function (e,index){
+      console.log(`<li id=${index}>${e}</li>`)
+    });
+</script>
+</body>
+</html>
